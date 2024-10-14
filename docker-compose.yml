@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  angular-ui:
+    build: .
+    container_name: angular-ui
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
